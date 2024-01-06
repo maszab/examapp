@@ -11,7 +11,7 @@
 }
 
 .icon-wrapper {
-    fill: blue;
+    fill: rgb(104, 104, 104);
 }
 
 .input-container {
@@ -49,4 +49,29 @@
     border-style: none;
     border: 1px solid gray;
     vertical-align: auto;
+}
+
+.management-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+}
+
+.today-list {
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.tomorrow-list {
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
 }
