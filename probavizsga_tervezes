@@ -1,0 +1,36 @@
+Webler probavizsga app
+
+1. Tervezes
+	1.1 Classok	
+		taskData
+			task: string="";
+			isToday: boolean=true;
+			isActive: boolean=false;
+	1.2 services
+		taskManagement
+			taskAdd(p:taskData)
+			intoTomorrow(activeArray:taskdata[])
+			intoToday(activeArray:taskdata[])
+			removeTask(activeArray: taskdata[])
+		
+		
+		
+		
+		
+	
+			
+ng new examapp --routing --standalone false --style=css && cd examapp && ng g class models/taskData --skip-tests && ng g s services/taskmanagement --skip-tests
+
+
+
+- bootstrap implementation	in angular.json	
+		
+2. Firebase project implementation
+
+3. Class quoteData implementation
+
+4. Service quoteAdd implementation
+		
+5. npm install -g firebase-tools	
+
+6. ng add @angular/fire
