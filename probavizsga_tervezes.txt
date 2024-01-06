@@ -19,18 +19,18 @@ Webler probavizsga app
 		
 	
 			
-ng new examapp --routing --standalone false --style=css && cd examapp && ng g class models/taskData --skip-tests && ng g s services/taskmanagement --skip-tests
+ng new examapp --routing --standalone false --style=css && cd examapp && ng g class models/taskData --skip-tests && ng g s services/taskManagement --skip-tests
 
 
 
-- bootstrap implementation	in angular.json	
+
 		
 2. Firebase project implementation
 
-3. Class quoteData implementation
+3. Class taskData implementation
 
-4. Service quoteAdd implementation
+4. Service taskManagement implementation
 		
-5. npm install -g firebase-tools	
+5.  ng add @angular/fire
 
-6. ng add @angular/fire
+6. ng deploy
