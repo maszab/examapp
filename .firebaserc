@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "examapp-cea14": {
+      "hosting": {
+        "examapp": [
+          "examapp-cea14"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "examapp-cea14"
+  }
+}
