@@ -4,7 +4,7 @@
         <div class="input-field">
             <input class="task-field" type="text" placeholder="Describe task" />
             <label for="today-radio">
-                <input type="radio" id="today-radio" name="schedule" />
+                <input type="radio" id="today-radio" name="schedule" checked />
                 Today</label>
             <label for="today-radio">
                 <input type="radio" id="tomorrow-radio" name="schedule" />
@@ -16,20 +16,52 @@
         <div class="today-list">
             <div class="input-header">Tasks for Today</div>
             <div class="task-card">
-                <input type="checkbox">
-                <p>Go shopping</p>
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Go shopping</p>
             </div>
             <div class="task-card">
-                <input type="checkbox">
-                <p>Wash the car</p>
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Wash the car</p>
             </div>
             <div class="task-card">
-                <input type="checkbox">
-                <p>Watch a movie</p>
+                <input type="checkbox" class="card-element" />
+                <p class="card-element">Watch a movie</p>
             </div>
             <div class="task-card">
-                <input type="checkbox">
-                <p>Read</p>
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Read</p>
+            </div>
+            <div class="task-card">
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Go shopping</p>
+            </div>
+            <div class="task-card">
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Wash the car</p>
+            </div>
+            <div class="task-card">
+                <input type="checkbox" class="card-element" />
+                <p class="card-element">Watch a movie</p>
+            </div>
+            <div class="task-card">
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Read</p>
+            </div>
+            <div class="task-card">
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Go shopping</p>
+            </div>
+            <div class="task-card">
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Wash the car</p>
+            </div>
+            <div class="task-card">
+                <input type="checkbox" class="card-element" />
+                <p class="card-element">Watch a movie</p>
+            </div>
+            <div class="task-card">
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Read</p>
             </div>
         </div>
         <div class="button-field">
@@ -39,7 +71,6 @@
                         d="M32 2C15.432 2 2 15.432 2 32c0 16.568 13.432 30 30 30s30-13.432 30-30C62 15.432 48.568 2 32 2m17 35.428H30.307V48L15 32l15.307-16v11.143H49z" />
                     <title>Schedule task for today</title>
                 </svg>
-
                 <svg height="30" width="6rem">
                     <text x="20" y="15">Today</text>
                 </svg>
@@ -50,39 +81,30 @@
                         d="M32 2C15.432 2 2 15.432 2 32c0 16.568 13.432 30 30 30s30-13.432 30-30C62 15.432 48.568 2 32 2m1.693 46V37.428H15V27.143h18.693V16L49 32z" />
                     <title>Schedule task for tomorrow</title>
                 </svg>
-
                 <svg height="30" width="6rem">
                     <text x="8" y="15">Tomorrow</text>
                 </svg>
             </div>
-
             <div class="icon-wrapper">
                 <svg xmlns="http://www.w3.org/2000/svg" width="6.8rem" height="6.8rem" viewBox="0 0 24 24">
                     <path
                         d="M12 2c5.53 0 10 4.47 10 10s-4.47 10-10 10S2 17.53 2 12S6.47 2 12 2m5 5h-2.5l-1-1h-3l-1 1H7v2h10zM9 18h6a1 1 0 0 0 1-1v-7H8v7a1 1 0 0 0 1 1" />
                     <title>Delete task</title>
                 </svg>
-
                 <svg height="30" width="6rem">
                     <text x="26" y="12">Delete</text>
                 </svg>
             </div>
-
-
-
-
-
-
         </div>
         <div class="tomorrow-list">
             <div class="input-header">Tasks for Tomorrow</div>
             <div class="task-card">
-                <input type="checkbox">
-                <p>Pay the bills</p>
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Pay the bills</p>
             </div>
             <div class="task-card">
-                <input type="checkbox">
-                <p>Watch a movie</p>
+                <input class="card-element" type="checkbox" />
+                <p class="card-element">Watch a movie</p>
             </div>
         </div>
     </div>

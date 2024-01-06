@@ -54,22 +54,35 @@
 .management-container {
     display: flex;
     justify-content: space-around;
-    align-items: top;
+    align-items: flex-start;
 }
 
 .today-list {
     border: 1px black solid;
     border-radius: 10px;
     margin-bottom: 25px;
+    width: 30%;
 }
 
 .tomorrow-list {
     border: 1px black solid;
     border-radius: 10px;
     margin-bottom: 25px;
+    width: 30%;
+
 }
 
 
+.task-card {
+    width: 80%;
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.card-element {
+    display: inline-block;
+}
 
 .icon-wrapper {
     display: flex;
