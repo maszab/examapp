@@ -29,8 +29,8 @@
 
             <div *ngFor="let x of service.tasks">
                 <div class="task-card" *ngIf="x.isToday">
-                    <input class="card-element" type="checkbox" />
-                    <p class="card-element">{{x.task}}/{{x.isToday}}</p>
+                    <input class="card-element" type="checkbox" [(ngModel)]="x.isActive" />
+                    <p class="card-element">{{x.task}}/{{x.isToday}}/{{x.isActive}}/p>
                 </div>
             </div>
 
@@ -68,14 +68,12 @@
             </div>
         </div>
         <div class="tomorrow-list">
-
             <div class="input-header">Tasks for Tomorrow</div>
             <div class="list-separator"></div>
-
             <div *ngFor="let x of service.tasks">
                 <div class="task-card" *ngIf="!x.isToday">
-                    <input class="card-element" type="checkbox" />
-                    <p class="card-element">{{x.task}}/{{x.isToday}}</p>
+                    <input class="card-element" type="checkbox" [(ngModel)]="x.isActive" />
+                    <p class="card-element">{{x.task}}/{{x.isToday}}/{{x.isActive}}</p>
                 </div>
             </div>
 
