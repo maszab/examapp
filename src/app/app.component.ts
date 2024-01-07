@@ -18,5 +18,13 @@ export class AppComponent {
     this.actual = new TaskData();
   }
 
+  changeSchedule() {
+    console.log("Checkbox clicked")
+
+  }
+
+  remove() {
+    this.service.delete();
+  }
 
 }

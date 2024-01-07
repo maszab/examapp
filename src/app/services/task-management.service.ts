@@ -18,12 +18,17 @@ export class TaskManagementService {
 
     this.export();
   }
+  /*
+    delete(id: string) {
+      this.tasks = this.tasks.filter(x => x.id != id);
+      this.export();
+    }
+  */
 
-  delete(id: string) {
-    this.tasks = this.tasks.filter(x => x.id != id);
+  delete() {
+    this.tasks = this.tasks.filter(x => !x.isActive);
     this.export();
   }
-
   import() {
     this.tasks = JSON.parse(localStorage.getItem('tasks') ?? '[]');
     this.tasks = this.tasks.map(x => Object.assign(new TaskData(), x));
