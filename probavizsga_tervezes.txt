@@ -3,6 +3,7 @@ Webler probavizsga app
 1. Tervezes
 	1.1 Classok	
 		taskData
+			id: string="";
 			task: string="";
 			isToday: boolean=true;
 			isActive: boolean=false;
@@ -22,7 +23,7 @@ Webler probavizsga app
 ng new examapp --routing --standalone false --style=css && cd examapp && ng g class models/taskData --skip-tests && ng g s services/taskManagement --skip-tests
 
 
-
+npm install guid-typescript
 
 		
 2. Firebase project implementation

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TaskData } from './models/task-data';
+import { TaskManagementService } from './services/task-management.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'examapp';
+  actual: TaskData = new TaskData();
+  constructor(public service: TaskManagementService) {
+    // this.actual.category = service.getCategories()[0];
+  }
+
+  create() {
+    this.service.create(this.actual);
+  }
 }
