@@ -30,7 +30,7 @@
             <div *ngFor="let x of service.tasks">
                 <div class="task-card" *ngIf="x.isToday">
                     <input class="card-element" type="checkbox" [(ngModel)]="x.isActive" />
-                    <p class="card-element">{{x.task}}/{{x.isToday}}/{{x.isActive}}/p>
+                    <p class="card-element">{{x.task}}</p>
                 </div>
             </div>
 
@@ -76,7 +76,7 @@
             <div *ngFor="let x of service.tasks">
                 <div class="task-card" *ngIf="!x.isToday">
                     <input class="card-element" type="checkbox" [(ngModel)]="x.isActive" />
-                    <p class="card-element">{{x.task}}/{{x.isToday}}/{{x.isActive}}</p>
+                    <p class="card-element">{{x.task}}</p>
                 </div>
             </div>
 
