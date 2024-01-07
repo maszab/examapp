@@ -9,15 +9,10 @@ Webler probavizsga app
 			isActive: boolean=false;
 	1.2 services
 		taskManagement
-			taskAdd(p:taskData)
-			intoTomorrow(activeArray:taskdata[])
-			intoToday(activeArray:taskdata[])
-			removeTask(activeArray: taskdata[])
-		
-		
-		
-		
-		
+			create(p:taskData)
+			scheduleToTomorrow()
+			scheduleToToday()
+			remove()
 	
 			
 ng new examapp --routing --standalone false --style=css && cd examapp && ng g class models/taskData --skip-tests && ng g s services/taskManagement --skip-tests
