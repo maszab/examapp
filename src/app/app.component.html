@@ -25,10 +25,13 @@
         <div class="today-list">
 
             <div class="input-header">Tasks for Today</div>
+            <div class="list-separator"></div>
 
-            <div class="task-card" *ngFor="let x of service.tasks">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">{{x.task}}/{{x.isToday}}</p>
+            <div *ngFor="let x of service.tasks">
+                <div class="task-card" *ngIf="x.isToday">
+                    <input class="card-element" type="checkbox" />
+                    <p class="card-element">{{x.task}}/{{x.isToday}}</p>
+                </div>
             </div>
 
         </div>
@@ -67,10 +70,13 @@
         <div class="tomorrow-list">
 
             <div class="input-header">Tasks for Tomorrow</div>
+            <div class="list-separator"></div>
 
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Pay the bills</p>
+            <div *ngFor="let x of service.tasks">
+                <div class="task-card" *ngIf="!x.isToday">
+                    <input class="card-element" type="checkbox" />
+                    <p class="card-element">{{x.task}}/{{x.isToday}}</p>
+                </div>
             </div>
 
         </div>

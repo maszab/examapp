@@ -72,6 +72,9 @@
 
 }
 
+.list-separator {
+    height: 10px;
+}
 
 .task-card {
     width: 80%;
