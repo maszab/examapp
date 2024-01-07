@@ -2,67 +2,35 @@
     <div class="input-container">
         <div class="input-header">Add new task</div>
         <div class="input-field">
-            <input class="task-field" type="text" placeholder="Describe task" />
+            <input class="task-field" type="text" placeholder="Describe task" [(ngModel)]="actual.task" />
             <label for="today-radio">
-                <input type="radio" id="today-radio" name="schedule" checked />
+                <input type="radio" id="today-radio" name="schedule" checked [(ngModel)]="actual.isToday"
+                    [value]="true" />
                 Today</label>
+
+            <!--
+<input type="radio" name="food" [(ngModel)]="document.valid" [value]="true">
+  <input type="radio" name="food" [(ngModel)]="document.valid" [value]="false">
+
+-->
+
+
             <label for="today-radio">
-                <input type="radio" id="tomorrow-radio" name="schedule" />
+                <input type="radio" id="tomorrow-radio" name="schedule" [(ngModel)]="actual.isToday" [value]="false" />
                 Tomorrow</label>
-            <button class="save-button" type="button">Save</button>
+            <button class="save-button" type="button" (click)="create()">Save</button>
         </div>
     </div>
     <div class="management-container">
         <div class="today-list">
+
             <div class="input-header">Tasks for Today</div>
-            <div class="task-card">
+
+            <div class="task-card" *ngFor="let x of service.tasks">
                 <input class="card-element" type="checkbox" />
-                <p class="card-element">Go shopping</p>
+                <p class="card-element">{{x.task}}/{{x.isToday}}</p>
             </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Wash the car</p>
-            </div>
-            <div class="task-card">
-                <input type="checkbox" class="card-element" />
-                <p class="card-element">Watch a movie</p>
-            </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Read</p>
-            </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Go shopping</p>
-            </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Wash the car</p>
-            </div>
-            <div class="task-card">
-                <input type="checkbox" class="card-element" />
-                <p class="card-element">Watch a movie</p>
-            </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Read</p>
-            </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Go shopping</p>
-            </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Wash the car</p>
-            </div>
-            <div class="task-card">
-                <input type="checkbox" class="card-element" />
-                <p class="card-element">Watch a movie</p>
-            </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Read</p>
-            </div>
+
         </div>
         <div class="button-field">
             <div class="icon-wrapper">
@@ -97,15 +65,14 @@
             </div>
         </div>
         <div class="tomorrow-list">
+
             <div class="input-header">Tasks for Tomorrow</div>
+
             <div class="task-card">
                 <input class="card-element" type="checkbox" />
                 <p class="card-element">Pay the bills</p>
             </div>
-            <div class="task-card">
-                <input class="card-element" type="checkbox" />
-                <p class="card-element">Watch a movie</p>
-            </div>
+
         </div>
     </div>
 </div>

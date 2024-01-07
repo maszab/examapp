@@ -15,5 +15,8 @@ export class AppComponent {
 
   create() {
     this.service.create(this.actual);
+    this.actual = new TaskData();
   }
+
+
 }
