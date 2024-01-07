@@ -10,7 +10,6 @@ import { TaskManagementService } from './services/task-management.service';
 export class AppComponent {
   actual: TaskData = new TaskData();
   constructor(public service: TaskManagementService) {
-    // this.actual.category = service.getCategories()[0];
   }
 
   create() {
@@ -19,21 +18,14 @@ export class AppComponent {
   }
 
   changeScheduleToday() {
-
-
     this.service.scheduleToToday();
-
   }
 
   changeScheduleTomorrow() {
-
-
     this.service.scheduleToTomorrow();
-
   }
 
   remove() {
     this.service.delete();
   }
-
 }

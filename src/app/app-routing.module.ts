@@ -1,3 +1,5 @@
+/*Routing is not used in this version. It was implemented to support further extensions*/
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

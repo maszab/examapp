@@ -7,23 +7,14 @@ import { TaskData } from '../models/task-data';
 export class TaskManagementService {
   tasks: TaskData[] = [];
 
-
   constructor() {
     this.import();
   }
 
-
   create(t: TaskData) {
     this.tasks.push(t);
-
     this.export();
   }
-  /*
-    delete(id: string) {
-      this.tasks = this.tasks.filter(x => x.id != id);
-      this.export();
-    }
-  */
 
   delete() {
     this.tasks = this.tasks.filter(x => !x.isActive);
@@ -39,7 +30,6 @@ export class TaskManagementService {
     }
     this.export();
   }
-
 
   scheduleToTomorrow() {
     for (let i = 0; this.tasks.length - 1; i++) {
@@ -59,6 +49,4 @@ export class TaskManagementService {
   export() {
     localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
-
-
 }

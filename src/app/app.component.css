@@ -49,6 +49,7 @@
     border-style: none;
     border: 1px solid gray;
     vertical-align: auto;
+    cursor: pointer;
 }
 
 .management-container {
@@ -90,4 +91,8 @@
 .icon-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+svg {
+    cursor: pointer;
 }

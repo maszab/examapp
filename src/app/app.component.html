@@ -7,33 +7,22 @@
                 <input type="radio" id="today-radio" name="schedule" checked [(ngModel)]="actual.isToday"
                     [value]="true" />
                 Today</label>
-
-            <!--
-<input type="radio" name="food" [(ngModel)]="document.valid" [value]="true">
-  <input type="radio" name="food" [(ngModel)]="document.valid" [value]="false">
-
--->
-
-
             <label for="today-radio">
                 <input type="radio" id="tomorrow-radio" name="schedule" [(ngModel)]="actual.isToday" [value]="false" />
                 Tomorrow</label>
-            <button class="save-button" type="button" (click)="create()">Save</button>
+            <button title="Add & save a new task" class="save-button" type="button" (click)="create()">Save</button>
         </div>
     </div>
     <div class="management-container">
         <div class="today-list">
-
             <div class="input-header">Tasks for Today</div>
             <div class="list-separator"></div>
-
             <div *ngFor="let x of service.tasks">
                 <div class="task-card" *ngIf="x.isToday">
                     <input class="card-element" type="checkbox" [(ngModel)]="x.isActive" />
                     <p class="card-element">{{x.task}}</p>
                 </div>
             </div>
-
         </div>
         <div class="button-field">
             <div class="icon-wrapper">
@@ -79,7 +68,6 @@
                     <p class="card-element">{{x.task}}</p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
